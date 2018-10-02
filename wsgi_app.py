@@ -4,9 +4,7 @@ from wsgiref.simple_server import make_server
 SERVER_HOSTNAME = 'localhost'
 SERVER_PORT = 8051
 
-# All WSGI compliant applications must accept two variables:
-#   a set of CGI environment variables (set by the server)
-#   a callback for sending a response to the server (provided by the server)
+# This WSGI application is a function
 def application(environ, start_response):
     response_body = 'Request method: {}'.format(environ['REQUEST_METHOD'])
 
