@@ -19,8 +19,8 @@ def application(environ, start_response):
     start_response(status, response_headers)
 
     # Return the response body to the server
-    response = bytes(response_body, 'utf-8')
-    return [response]       # Returned value must be iterable
+    response_body = bytes(response_body, 'utf-8')
+    return [response_body]       # Returned value must be iterable
 
 
 # Instantiate a server

@@ -15,8 +15,8 @@ def application(environ, start_response):
         ('Content-Length', str(len(response_body))),
     ]
     start_response(status, response_headers)
-    response = bytes(response_body, 'utf-8')
-    return [response]
+    response_body = bytes(response_body, 'utf-8')
+    return [response_body]
 
 httpd = wsgiref.simple_server.make_server(
     SERVER_HOSTNAME,
