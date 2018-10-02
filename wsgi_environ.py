@@ -1,5 +1,8 @@
 import wsgiref.simple_server
 
+SERVER_HOSTNAME = 'localhost'
+SERVER_PORT = 8051
+
 def application(environ, start_response):
     response_body = []
     for key, value in sorted(environ.items()):
@@ -16,9 +19,10 @@ def application(environ, start_response):
     return [response]
 
 httpd = wsgiref.simple_server.make_server(
-    'localhost',
-    8051,
+    SERVER_HOSTNAME,
+    SERVER_PORT,
     application
 )
 
+print('Listening for a single request at {}:{}'.format(SERVER_HOSTNAME, SERVER_PORT))
 httpd.handle_request()

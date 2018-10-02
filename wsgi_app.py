@@ -1,6 +1,9 @@
 # Python has a built-in WSGI server
 from wsgiref.simple_server import make_server
 
+SERVER_HOSTNAME = 'localhost'
+SERVER_PORT = 8051
+
 # All WSGI compliant applications must accept two variables:
 #   a set of CGI environment variables (set by the server)
 #   a callback for sending a response to the server (provided by the server)
@@ -22,9 +25,10 @@ def application(environ, start_response):
 
 # Instantiate a server
 httpd = make_server(
-    'localhost',
-    8051,
+    SERVER_HOSTNAME,
+    SERVER_PORT,
     application
 )
 
+print('Listening for a single request at {}:{}'.format(SERVER_HOSTNAME, SERVER_PORT))
 httpd.handle_request()
