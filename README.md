@@ -26,3 +26,9 @@ WSGI applications can be stacked. This middleware behaves as
 
   * an application to the application on top of it
   * as a server to the application below it
+
+## Links
+
+This tutorial is take from [codepoint.net](http://wsgi.tutorial.codepoint.net/intro)
+Also learn about [parsing GET](http://wsgi.tutorial.codepoint.net/parsing-the-request-get)
+and [parsing POST](http://wsgi.tutorial.codepoint.net/parsing-the-request-post) requests.
