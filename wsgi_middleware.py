@@ -21,7 +21,11 @@ class Middleware():
 
     # Server interface?
     def __init__(self, app):
-        ''' "Wrap" the application '''
+        '''
+        "Wrap" the application.
+        This allows us to capture (and process) all calls to and
+        responses from the application.
+        '''
         self.wrapped_app = app
 
     # WSGI application interface:

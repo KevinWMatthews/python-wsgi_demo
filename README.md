@@ -51,6 +51,17 @@ The server's callback is required to accept two arguments:
 Applications are expected to execute the callback and provide these arguments.
 
 
+## WSGI Server Spec
+
+TODO
+
+## Notes
+
+Middleware consumes all URL's/paths that it receives.
+You need to dispatch paths manually in your middleware, or configure
+your server (such as nginx) to do this for you?
+See [path dispatching](http://lucumr.pocoo.org/2007/5/21/getting-started-with-wsgi/).
+
 ## Links
 
 This tutorial is take from [codepoint.net](http://wsgi.tutorial.codepoint.net/intro)
@@ -58,3 +69,5 @@ Also learn about [parsing GET](http://wsgi.tutorial.codepoint.net/parsing-the-re
 and [parsing POST](http://wsgi.tutorial.codepoint.net/parsing-the-request-post) requests.
 
 [flup](https://www.saddi.com/software/flup/)
+
+TODO [This link](http://www.xml.com/pub/a/2006/09/27/introducing-wsgi-pythons-secret-web-weapon.html) looks cool.
